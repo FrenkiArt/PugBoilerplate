@@ -107,6 +107,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               publicPath: '/',
+              // publicPath: isDev ? '/' : '/subdomen/',
             },
           },
           'css-loader',
