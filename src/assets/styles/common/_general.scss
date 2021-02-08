@@ -11,10 +11,18 @@ body {
 }
 
 body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .wrap-main {
+    margin-bottom: auto;
+  }
 }
 
 .container {
-
+  position: relative;
 }
 
 h1,

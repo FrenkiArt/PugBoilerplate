@@ -1,4 +1,4 @@
-//- _template layout
+//- _template layout 
 
 doctype html
 html(lang='ru')
@@ -41,7 +41,8 @@ html(lang='ru')
     style.
       body {
       }
-
+  |
+  |
   body
     |
     |
@@ -49,9 +50,10 @@ html(lang='ru')
     include ../components/header/header.pug
     // Header/
     |
-    |
-    //- block content
-    block content
+    |  
+    .wrap-main
+      //- block content
+      block content 
     |
     |
     // Footer
@@ -60,3 +62,5 @@ html(lang='ru')
 
     //- block scripts
     block scripts
+  |
+  |

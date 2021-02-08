@@ -1,16 +1,19 @@
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const isDev = process.env.NODE_ENV !== 'production';
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 // const webpack = require('webpack');
 const fs = require('fs');
+const isDev = process.env.NODE_ENV !== 'production';
+
+console.log('isDev', isDev);
 
 // Для Pug-а
 const PAGES_DIR = path.resolve(__dirname, `src/views/pages/`);
-/* const PAGES = fs.readdirSync(PAGES_DIR).filter((fileName) =>
-fileName.endsWith('.pug')); */
+/* const PAGES = fs
+  .readdirSync(PAGES_DIR)
+  .filter((fileName) => fileName.endsWith('.pug')); */
 const PAGES = fs.readdirSync(PAGES_DIR).filter(filtrPugFiles);
 
 /**
@@ -54,7 +57,7 @@ module.exports = {
     hot: true,
     open: true,
     overlay: true,
-    port: 9000,
+    port: 5000,
   },
   plugins: [
     ...PAGES.map(returnNewPage),
@@ -115,6 +118,24 @@ module.exports = {
         ],
       }, */
       {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          // isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: isDev ? '/' : '/',
+              // publicPath: isDev ? '/' : '/ondas/',
+              // publicPath: '/',
+              // publicPath: publicPathForMainCss,
+            },
+          },
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
+      },
+      {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
@@ -173,6 +194,7 @@ module.exports = {
   },
 };
 
+/* 
 if (isDev) {
   module.exports.module.rules.push({
     test: /\.(sa|sc|c)ss$/,
@@ -194,3 +216,4 @@ if (isDev) {
     ],
   });
 }
+ */

@@ -1,43 +1,32 @@
-import _ from 'lodash';
-import './assets/styles/style.css';
-import Icon from './assets/svg/webpack-logo.svg';
-import './assets/fonts/blacklist/font.css';
-import printMe from './print.js';
-import './assets/styles/main.scss';
-import './assets/styles/style.scss';
+// Вендоры
 import 'normalize.css';
+import '../node_modules/svgxuse/svgxuse.min.js';
 
-import './views/modules/block-img/styles/block-img.sass';
-import './views/modules/block-img/js/block-img.js';
+// Шрифты
+import './assets/fonts/blacklist/font.css';
 
-/**
- * sdfsdf
- * @return {*} sdf
- */
-function component() {
-  const element = document.createElement('div');
-  const btn = document.createElement('button');
-  const hello2 = document.createElement('div');
+// Миксины
+import './views/mixins/mixins.scss';
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-  hello2.classList.add('hello2');
+// Стили для сайта
+import './assets/styles/style.scss';
 
-  // Add the image to our existing div.
-  const myIcon = new Image();
-  myIcon.src = Icon;
+// Модули нашего проекта
+import './views/components/breadcrumbs/breadcrumbs.scss';
+import './views/components/buttons/button.scss';
+import './views/components/footer/footer.scss';
+import './views/components/form/form.scss';
+import './views/components/header/header.scss';
+import './views/components/links/link.scss';
+import './views/components/menu/menu.scss';
+import './views/components/pagination/pagination.scss';
+import './views/mixins/mixins.scss';
 
-  element.appendChild(myIcon);
+// Страницы
+//import './views/components/pages/index.scss';
 
-  btn.innerHTML = 'Click me and check the console!';
-
-  btn.onclick = printMe;
-
-  element.appendChild(btn);
-
-  document.body.appendChild(hello2);
-
-  return element;
-}
-
-document.body.appendChild(component());
+window.onresize = () => {
+  setTimeout(() => {
+    console.log(window.innerWidth);
+  }, 1);
+};
