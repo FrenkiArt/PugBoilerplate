@@ -23,7 +23,14 @@ import './views/components/pagination/pagination.scss';
 import './views/mixins/mixins.scss';
 
 // Страницы
-//import './views/components/pages/index.scss';
+// import './views/components/pages/index.scss';
+
+/**
+ * Эта функция выводит ширину вьюпорта тогда,
+ * когда происходит изменение размера окна
+ * @date 2021-02-09
+ * @return {void}
+ */
 
 window.onresize = () => {
   setTimeout(() => {
