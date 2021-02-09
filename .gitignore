@@ -37,7 +37,9 @@ _tmp
 .tmp
 bower_components
 #index.html
+# Ignore nodemodules folder
 node_modules
+/node_modules
 
 # The file containing environment variables
 .env
@@ -47,3 +49,4 @@ npm-debug.*
 
 # Ignore the build directory
 #/distr
+#/dist
