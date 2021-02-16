@@ -118,7 +118,7 @@ module.exports = {
           'sass-loader',
         ],
       }, */
-      {
+      /* {
         test: /\.(sa|sc|c)ss$/,
         use: [
           // isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -135,7 +135,7 @@ module.exports = {
           'postcss-loader',
           'sass-loader',
         ],
-      },
+      }, */
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
@@ -195,7 +195,6 @@ module.exports = {
   },
 };
 
-/* 
 if (isDev) {
   module.exports.module.rules.push({
     test: /\.(sa|sc|c)ss$/,
@@ -208,7 +207,7 @@ if (isDev) {
       {
         loader: MiniCssExtractPlugin.loader,
         options: {
-          publicPath: '/',
+          publicPath: './../../',
         },
       },
       'css-loader',
@@ -217,4 +216,3 @@ if (isDev) {
     ],
   });
 }
- */
