@@ -41,26 +41,45 @@ html(lang='ru')
     style.
       body {
       }
+      .popup {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+      }
   |
   |
   body
     |
     |
-    // Header
-    include ../components/header/header.pug
-    // Header/
+    include ../components/buttons/button.pug 
+    include ../components/tabs/tabs.pug  
+    include ../mixins/mixins.pug 
     |
-    |  
-    .wrap-main
+    |
+    .page.page-index
+      |
+      |
+      //- Header
+      include ../components/header/header.pug
+      //- Header/
+      |
+      |  
       //- block content
       block content 
+      |
+      |
+      //- Footer
+      include ../components/footer/footer.pug
+      //- Footer/
+      |
+      |
+      include ../components/popup/popup.pug
+      |
+      |
     |
     |
-    // Footer
-    include ../components/footer/footer.pug
-    // Footer/
-
     //- block scripts
     block scripts
+    |
+    |
   |
   |

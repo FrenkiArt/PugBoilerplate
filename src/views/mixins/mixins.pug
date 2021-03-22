@@ -12,7 +12,7 @@ mixin navLink(link, name, last)
     else
       a(href=link).nav-link=name
 
-// Radio button
+//- Radio button
 mixin radio(args) 
     .radio(id=attributes.id ? attributes.id : null, class=attributes.class ? attributes.class : null): label
       input(
@@ -34,7 +34,7 @@ mixin field(args)
     id=attributes.id ? attributes.id : null
   )
   
-// - Button
+//- Button
 mixin button(args)
     button.btn(
       type=args.type ? args.type : 'button'

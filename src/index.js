@@ -21,6 +21,8 @@ import './views/components/links/link.scss';
 import './views/components/menu/menu.scss';
 import './views/components/tabs/tabs.scss';
 import './views/components/tabs/tabs.js';
+import './views/components/cart/cart.scss';
+import './views/components/cart/cart.js';
 import './views/components/pagination/pagination.scss';
 import './views/components/popup/popup.scss';
 import {myPopup} from './views/components/popup/popup.js';

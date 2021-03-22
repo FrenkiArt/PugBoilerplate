@@ -1,5 +1,6 @@
 // src/views/components/mixins/mixins.scss
-@import '../../../assets/styles/utils/variables';
+//@import '../../../assets/styles/utils/variables';
+@import '/src/assets/styles/utils/variables';
 
 @mixin size($n) {
   width: calc(100% / 12 * #{$n} - 30px);
