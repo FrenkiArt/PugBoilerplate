@@ -36,7 +36,7 @@ function returnNewPage(page) {
     filename: `./${page.replace(/\.pug/, '.html')}`,
     // favicon: './assets/static/favicon.ico',
     scriptLoading: 'defer',
-    inject: 'body',
+    inject: 'head',
     minify: false,
   });
 }
