@@ -10,20 +10,36 @@ block basicSeo
 
 block content
   |
-  | 
-  .wrap-main
+  |
+  .page.page-index
     |
     |
-    .container
+    //- Header
+    include ../components/header/header.pug
+    //- Header/
+    |
+    |  
+    .wrap-main
       |
       |
-      //- Desktop page
-      h1 Начальная страница 
-      |
-      |
-      include ../components/breadcrumbs/breadcrumbs.pug
-      |
-      |  
+      .container
+        |
+        |
+        //- Desktop page
+        h1 Начальная страница 
+        |
+        |
+        include ../components/breadcrumbs/breadcrumbs.pug
+        |
+        |  
+    |
+    |
+    //- Footer
+    include ../components/footer/footer.pug
+    //- Footer/
+    |
+    |
+    include ../components/popup/popup.pug
     |
     | 
   |
